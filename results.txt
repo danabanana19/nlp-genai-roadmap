@@ -1,0 +1,2 @@
+English: "I love learning NLP" -> [{'label': 'POSITIVE', 'score': 0.9995612502098083}]
+Kazakh: "Мен бұл курсты жақсы көремін" -> [{'label': 'NEGATIVE', 'score': 0.6448949575424194}]

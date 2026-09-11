@@ -1,5 +1,16 @@
 from transformers import pipeline
 
 classifier = pipeline("sentiment-analysis")
-result = classifier("Мен бұл курсты жақсы көремін")
-print(result)
+
+sentences = {
+    "English": "I love learning NLP",
+    "Kazakh": "Мен бұл курсты жақсы көремін",
+}
+
+with open("results.txt", "w") as f:
+    for lang, text in sentences.items():
+        result = classifier(text)
+        line = f"{lang}: \"{text}\" -> {result}"
+        print(line)
+        f.write(line + "\n")
+
