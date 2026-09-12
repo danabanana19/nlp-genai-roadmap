@@ -1,16 +1,17 @@
-from transformers import pipeline
+from transformers import AutoTokenizer
 
-classifier = pipeline("sentiment-analysis")
+tokenizer = AutoTokenizer.from_pretrained("bert-base-multilingual-cased")
 
 sentences = {
-    "English": "I love learning NLP",
-    "Kazakh": "Мен бұл курсты жақсы көремін",
+    "English": "I love learning about language models.",
+    "Kazakh": "Мен тіл модельдері туралы білім алуды жақсы көремін.",
+    "Spanish": "Me encanta aprender sobre modelos de lenguaje.",
 }
 
 with open("results.txt", "w") as f:
     for lang, text in sentences.items():
-        result = classifier(text)
-        line = f"{lang}: \"{text}\" -> {result}"
+        tokens = tokenizer.tokenize(text)
+        line = f"\n{lang}: \"{text}\"\n  tokens ({len(tokens)}): {tokens}\n"
         print(line)
-        f.write(line + "\n")
+        f.write(line)
 
