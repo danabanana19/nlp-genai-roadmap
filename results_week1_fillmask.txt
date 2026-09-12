@@ -1,0 +1,10 @@
+
+English: "I love learning [MASK]."
+  guess: learning (score: 0.103)
+  guess: it (score: 0.057)
+  guess: experience (score: 0.023)
+
+Kazakh: "Мен [MASK] оқуды жақсы көремін."
+  guess: мен (score: 0.113)
+  guess: ##зі (score: 0.112)
+  guess: де (score: 0.094)
