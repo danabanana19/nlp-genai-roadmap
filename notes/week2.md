@@ -28,3 +28,20 @@ model handles Kazakh well -- suggesting model architecture/training
 objective matters more than just "is Kazakh represented," since embedding
 models seem to generalize cross-lingually better than token-classification
 models tested earlier.
+
+
+## Semantic search with FAISS
+Built a tiny semantic search engine: encoded 5 unrelated documents (about
+Kazakh, Basque, Python, RAG, and attention) into vectors, indexed them with
+FAISS (IndexFlatL2), then searched using the query "How does attention work
+in transformers?"
+
+Result: correctly retrieved the document about attention as the #1 match
+(distance 29.2), with no keyword overlap between the query and the document
+-- pure meaning-based retrieval. This is the same underlying mechanism RAG
+systems use to find relevant context before generating an answer.
+
+Key distinction: same embedding model must be used for both documents and
+query, since different models produce incompatible vector spaces. FAISS
+itself only handles fast numerical comparison -- it has no understanding
+of language; the "semantic" part comes entirely from the embedding model.

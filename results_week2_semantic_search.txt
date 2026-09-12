@@ -1,0 +1,4 @@
+Query: How does attention work in transformers?
+
+Rank 1: "Attention lets a model look at all input tokens at once, not just a summary." (distance: 29.219)
+Rank 2: "RAG combines retrieval with a language model to reduce hallucinations." (distance: 37.872)
