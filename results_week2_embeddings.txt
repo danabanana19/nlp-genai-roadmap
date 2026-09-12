@@ -1,0 +1,6 @@
+"I love this course" <-> "This class is amazing"
+  similarity: 0.735
+"I love this course" <-> "I hate cold weather"
+  similarity: 0.010
+"Мен бұл курсты жақсы көремін" <-> "I love this course"
+  similarity: 0.766
