@@ -3,7 +3,7 @@
 I'm Dana Tussupbekova, an MSc student in Language Analysis and Processing at the University of the Basque Country (UPV/EHU), based in Donostia, Spain. 
 I speak Kazakh, Russian, Spanish, and English, and my focus is multilingual and low-resource-language NLP.
 
-This repo is my hands-on learning log as I build toward LLM/GenAI engineering roles — closing the gap between academic NLP and applied skills like RAG, semantic search, knowledge graphs, and fine-tuning. 
+This repo is my hands-on learning log as I build toward LLM/GenAI engineering roles - closing the gap between academic NLP and applied skills like RAG, semantic search, knowledge graphs, and fine-tuning. 
 Every script here is something I built and ran myself, with results and notes documenting what I found, including bugs I hit and fixed along the way.
 
 ## Structure
