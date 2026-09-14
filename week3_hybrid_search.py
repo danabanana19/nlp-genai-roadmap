@@ -13,21 +13,21 @@ documents = [
     "Attention lets a model look at all input tokens at once, not just a summary.",
 ]
 
-def clean_tokenize(text):
+def clean_tokenize(text): #function to delete punctuation, before applying function What is RAG?".lower().split() -> ['what', 'is', 'rag?']
     text = re.sub(r'[^\w\s]', '', text.lower())
     return text.split()
 
 query = "What is RAG?"
 
 # --- BM25 setup (keyword-based) ---
-tokenized_docs = [clean_tokenize(doc) for doc in documents]
+tokenized_docs = [clean_tokenize(doc) for doc in documents] #tokenized and deleted punctuation for each doc
 bm25 = BM25Okapi(tokenized_docs)
 bm25_scores = bm25.get_scores(clean_tokenize(query))
 
 # --- Embedding setup (meaning-based) ---
 doc_embeddings = model.encode(documents, convert_to_tensor=True)
 query_embedding = model.encode(query, convert_to_tensor=True)
-embed_scores = util.cos_sim(query_embedding, doc_embeddings)[0].cpu().numpy()
+embed_scores = util.cos_sim(query_embedding, doc_embeddings)[0].cpu().numpy() #cpu() added to move scores Mac's GPU into regular memory
 
 # Normalize both score sets to 0-1 so they're comparable, then combine
 def normalize(scores):
