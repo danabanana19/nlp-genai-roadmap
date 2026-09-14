@@ -1,0 +1,12 @@
+Query: What is RAG?
+
+Rank 1: "RAG combines retrieval with a language model to reduce hallucinations."
+  bm25=1.000  embed=1.000  hybrid=1.000
+Rank 2: "Kazakh is an agglutinative Turkic language spoken mainly in Kazakhstan."
+  bm25=0.208  embed=0.364  hybrid=0.286
+Rank 3: "Attention lets a model look at all input tokens at once, not just a summary."
+  bm25=0.000  embed=0.557  hybrid=0.279
+Rank 4: "The Basque language is a linguistic isolate spoken in northern Spain."
+  bm25=0.200  embed=0.165  hybrid=0.182
+Rank 5: "Python is a popular programming language for data science and AI."
+  bm25=0.200  embed=0.000  hybrid=0.100
