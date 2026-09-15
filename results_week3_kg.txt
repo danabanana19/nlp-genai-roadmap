@@ -1,0 +1,5 @@
+Dana --studiesAt--> UPVEHU
+Dana --speaks--> Kazakh
+Dana --speaks--> Russian
+Dana --speaks--> Spanish
+Dana --worksOn--> Thesis
