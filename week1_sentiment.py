@@ -4,7 +4,7 @@ classifier = pipeline("sentiment-analysis")
 
 sentences = {
     "English": "I love learning NLP",
-    "Kazakh": "Мен бұл курсты жақсы көремін",
+    "Kazakh": "Мен бұл курсты жақсы көремін", #translation -> I love this course
 }
 
 with open("results_week1_sentiment.txt", "w") as f:
