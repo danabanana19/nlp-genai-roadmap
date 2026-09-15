@@ -26,7 +26,7 @@ the subject of another -- e.g. "Dana -> worksOn -> Thesis" and
 This chaining is what lets you ask multi-hop questions (e.g. "what does
 Dana's work eventually connect to?") that no single triple answers alone.
 
-## Namespace
+# Namespace
 `Namespace("http://example.org/")` is just a shortcut so `n.Dana` expands
 automatically to a full, unique ID (`http://example.org/Dana`) without
 typing the whole address every time. The URL isn't a real website -- it's
@@ -34,7 +34,7 @@ borrowed purely because URLs are guaranteed unique, the same way a company
 might assign unique employee IDs. `example.org` specifically is reserved
 for examples and will never be a live site.
 
-## Querying with SPARQL
+# Querying with SPARQL
 SPARQL is a separate mini-language (not Python) for asking questions of a
 graph. Inside a query, you can't use the Python `n.Dana` shortcut -- you
 have to write the full `<http://example.org/Dana>` address, since SPARQL
@@ -50,14 +50,14 @@ variable, depending on the question being asked:
 - Fix predicate, ask for subject/object -> "who/what has relationship Y?"
 - Fix object, ask for subject/predicate -> "what points TO Z?"
 
-## Multi-hop queries
+# Multi-hop queries
 Rather than one complex chained query, this can be done as two simple
 queries run back to back: query 1 finds what's connected to Dana (e.g.
 Thesis), query 2 then asks what's connected to Thesis (e.g. LLMs).
 Breaking a hard question into two simple ones is a valid, often clearer
 approach.
 
-## Extracting triples from real sentences
+# Extracting triples from real sentences
 A full natural sentence (with adjectives, extra description) doesn't map
 directly to one triple -- you extract the core fact. E.g. "Dana, a
 talented multilingual student, speaks fluent Kazakh" reduces to
@@ -68,7 +68,7 @@ talented multilingual student, speaks fluent Kazakh" reduces to
 This connects directly to entity/relation extraction (e.g. spaCy NER) --
 turning free text into structured triples is a real, non-trivial NLP task.
 
-## Quads
+# Quads
 A quad is a triple plus a 4th element -- a graph/context tag, e.g.
 (Dana, speaks, Kazakh, self-reported). Useful for tracking where a fact
 came from when combining data from multiple sources. rdflib supports this
