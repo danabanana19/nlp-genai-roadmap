@@ -27,6 +27,7 @@ This chaining is what lets you ask multi-hop questions (e.g. "what does
 Dana's work eventually connect to?") that no single triple answers alone.
 
 Namespace
+
 `Namespace("http://example.org/")` is just a shortcut so `n.Dana` expands
 automatically to a full, unique ID (`http://example.org/Dana`) without
 typing the whole address every time. The URL isn't a real website -- it's
